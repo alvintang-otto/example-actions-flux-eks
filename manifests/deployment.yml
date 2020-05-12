@@ -5,6 +5,7 @@ metadata:
   name: aws-example-octodex
   annotations:
     fluxcd.io/automated: "true"
+    fluxcd.io/tag.aws-example-octodex: glob:1.4.*
 spec:
   replicas: 1
   selector:
