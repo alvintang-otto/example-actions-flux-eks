@@ -39,7 +39,8 @@ jobs:
     - name: Build and tag the image
       run: |
         # Build and tag the image
-        docker build ./app --tag $CONTAINER_IMAGE  
+        #docker build ./app --tag $CONTAINER_IMAGE  
+        echo docker build
            
     # Add additional steps here like scanning of image
 
