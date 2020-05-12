@@ -39,7 +39,10 @@ jobs:
     - name: Build and tag the image
       run: |
         # Build and tag the image
-        docker build ./app --tag $CONTAINER_IMAGE  
+        docker build \
+          -t $CONTAINER_IMAGE \
+          -t $GITHUB_REPOSITORY:$GITHUB_SHA \
+          -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$CONTAINER_IMAGE ./app
            
     # Add additional steps here like scanning of image
 
