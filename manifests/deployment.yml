@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: aws-example-octodex
-        image: 284986994002.dkr.ecr.eu-west-1.amazonaws.com/github-action-flux:2dd27c4dcceba6c337f42d6cfcb63d81b67b3146
+        image: 284986994002.dkr.ecr.eu-west-1.amazonaws.com/github-action-flux:4eae53e2a3adf49698c239ae0b9741b76a71d7b4
         ports:
         - containerPort: 5000
         resources:
