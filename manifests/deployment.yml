@@ -1,5 +1,5 @@
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: aws-example-octodex
@@ -7,6 +7,9 @@ metadata:
     fluxcd.io/automated: "true"
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: aws-example-octodex
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -19,7 +22,6 @@ spec:
     spec:
       containers:
       - name: aws-example-octodex
-        # image: 00000000000000.dkr.ecr.my-region.amazonaws.com/example-eks:tag
         image: 284986994002.dkr.ecr.eu-west-1.amazonaws.com/github-action-flux:2dd27c4dcceba6c337f42d6cfcb63d81b67b3146
         ports:
         - containerPort: 5000
