@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: aws-example-octodex
-        image: sigmaeibon/flux-example:6d675052cb046e453f3c2725ea98f6ad6d49e235
+        image: sigmaeibon/github-action-flux:6d675052cb046e453f3c2725ea98f6ad6d49e235
         ports:
         - containerPort: 5000
         resources:
